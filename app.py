@@ -1,10 +1,14 @@
-from flask import Flask
+from flask import Flask, render_template
 from bs4 import BeautifulSoup
 import requests
 
-# app = Flask(__name__)
+app = Flask(__name__)
 
-username = "whereisalidev"
+app.route('/')
+def index():
+    return render_template()
+
+
 
 github_html = requests.get(f'https://github.com/{username}').text
 
