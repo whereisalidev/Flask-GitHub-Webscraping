@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>GitHub Profile Details</h2>
+        <img src="{{ img_url }}" alt="Profile Picture" class="profile-pic">
+        <p><strong>Name:</strong> {{ name }}</p>
+        <p><strong>Bio:</strong> {{ bio }}</p>
+        <p><strong>Repositories:</strong> {{ repos }}</p>
+        <p><strong>Followers:</strong> {{ followers }}</p>
+    </div>
+</body>
+</html>

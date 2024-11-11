@@ -5,17 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flask-GitHub-profile-webscraping</title>
-    <link rel="stylesheet" href={% static "style/style.css" %}>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
 </head>
 
 <body>
     <div class="container">
-        <form action="#" method="POST" class="form">
+        <form action="{{ url_for('result') }}" method="POST" class="form">
             <h2>Enter GitHub Username</h2>
             <input type="text" name="username" placeholder="GitHub Username" required>
+            {% if error %}
+            <p class='error'>{{ error }}</p>
+            {% endif %}
             <button type="submit">Submit</button>
         </form>
     </div>
+    
 </body>
+
 
 </html>
