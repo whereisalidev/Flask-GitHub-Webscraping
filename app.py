@@ -8,7 +8,7 @@ app.route('/')
 def index():
     return render_template('index.html')
 
-app.route('/result')
+app.route('/result', methods=['POST'])
 def result():
     username = request.form['username']
     github_html = requests.get(f'https://github.com/{username}').text
@@ -26,4 +26,4 @@ def result():
     return render_template('result.html', name=name, bio=bio, img_url=img_url, repos=repos, followers=followers)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
