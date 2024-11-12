@@ -12,7 +12,7 @@
     <div class="container">
         <form action="{{ url_for('result') }}" method="POST" class="form">
             <h2>Enter GitHub Username</h2>
-            <input type="text" name="username" placeholder="GitHub Username" required>
+            <input type="text" name="username" placeholder="e.g, whereisalidev" required>
             {% if error %}
             <p class='error'>{{ error }}</p>
             {% endif %}
